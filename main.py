@@ -51,7 +51,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.setFixedSize(self.size())
 
-        self.workdir = os.getenv("HOME", ".")
+        self.workdir = os.getenv("HOME", os.getenv("USERPROFILE", "."))
 
         self.ui.lstImages.itemSelectionChanged.connect(self.images_selection_changed)
         self.ui.btnLoadImage.clicked.connect(self.btn_load_image_clicked)

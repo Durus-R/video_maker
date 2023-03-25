@@ -20,7 +20,7 @@ cd ~\repo
 pipenv install
 
 # Create a batch file to activate the environment and run main.py
-$batFilePath = "$env:USERPROFILE\Desktop\video_creator.bat"
+$batFilePath = "$env:USERPROFILE\Desktop\slideshow_maker.bat"
 @"
 @echo off
 cd $env:USERPROFILE\slideshow_maker

@@ -1,2 +1,2 @@
-pyqt5==5.15.9
-moviepy==1.0.3
+pyqt5
+moviepy

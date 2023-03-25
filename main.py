@@ -126,6 +126,8 @@ class MainWindow(QtWidgets.QMainWindow):
     def btn_load_folder_clicked(self):
         new_dir = QtWidgets.QFileDialog.getExistingDirectory(self, "Ordner öffnen...", self.workdir)
         files = []
+        if new_dir == "":
+            return
         for i in os.listdir(new_dir):
             if os.path.splitext(i)[1] in [".png", ".jpg"]:
                 files.append(os.path.join(new_dir, i))

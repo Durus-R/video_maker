@@ -14,10 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(292, 161)
+        Dialog.resize(518, 163)
         Dialog.setModal(True)
         self.verticalLayoutWidget = QtWidgets.QWidget(Dialog)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 30, 261, 101))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 30, 481, 101))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -28,9 +28,9 @@ class Ui_Dialog(object):
         self.progress.setTextVisible(False)
         self.progress.setObjectName("progress")
         self.verticalLayout.addWidget(self.progress)
-        self.btnCancel = QtWidgets.QPushButton(self.verticalLayoutWidget)
-        self.btnCancel.setObjectName("btnCancel")
-        self.verticalLayout.addWidget(self.btnCancel)
+        self.label = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -38,4 +38,4 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.btnCancel.setText(_translate("Dialog", "Abbrechen"))
+        self.label.setText(_translate("Dialog", "Bitte schließen sie nicht dieses Fenster. Sie können das Erstellen nicht stoppen."))
